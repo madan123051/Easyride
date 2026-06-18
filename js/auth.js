@@ -12,6 +12,9 @@ function setLang(l) {
   const labels = { en: 'English', ne: 'नेपाली', hi: 'हिन्दी', new: 'नेपाल भाषा' };
   const lbl = document.getElementById('currentLangLabel');
   if (lbl) lbl.textContent = labels[l] || 'English';
+
+  // Navigate to login after short delay so user sees selection
+  setTimeout(() => go('login'), 350);
 }
 
 function doLogin() {
